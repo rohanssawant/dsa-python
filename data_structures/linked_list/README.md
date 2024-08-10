@@ -4,7 +4,7 @@ In its simplest form is the collection of Nodes that form linear sequence. A Nod
 The first and last node of the linked lists are known as Head and Tail. We explicitly maintain Head, Tail and number of nodes(size).
 Traversing the linked list is the process of moving from one Node to another by following the next Node's reference.
 
-![alt text](image.png)
+![alt text](assets/image.png)
 
 ### Insert an element at the Head
 
@@ -16,7 +16,7 @@ Important steps for inserting
 - Set its element and its next link to the current head of the linked list
 - Set the new node as the new head of the linked list.
 
-![alt text](image-2.png)
+![alt text](assets/image-2.png)
 
 ```
 Algorithm add_first(L, e):
@@ -36,7 +36,7 @@ Important steps for inserting
 - set Tail as the new node of LL
 - increment size of LL
 
-![alt text](image-3.png)
+![alt text](assets/image-3.png)
 
 ```
 Algorithm add_last(L, e)
@@ -70,8 +70,8 @@ Doubly linked lists are similar to singly linked lists with an additional refere
 
 There are special "dummy" nodes that are present at the both ends of the list: `header` is present at the start of the list and `trailer` is present at the end of the list.
 
-![alt text](image-4.png)
+![alt text](assets/image-4.png)
 
 ### Inserting and deleting
 
-![alt text](image-5.png)
+![alt text](assets/image-5.png)
