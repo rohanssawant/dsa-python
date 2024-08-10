@@ -30,3 +30,22 @@ The analysis of our `ArrayStack` is same as Python's List. The space for this `O
 | S.top()      | `O(1)`  |
 | S.is_empty() | `O(1)`  |
 | len(S)       | `O(1)`  |
+
+### LinkedList based implementation
+
+Stacks can also be implemented using LinkedLists. When designing stack with linkedlist we have to decide what will be the `top` of Stack if we should use `head` of linkedlist or `tail` of linkedlist as `top` of our Stack.
+The obvious choice is we use `head` of Linkedlist as our `top` of Stack. Inserting and removing elements from `head` is constant time.
+
+![Stacks using LL](assets/image.png)
+
+#### Analysis
+
+| Operation    | Time   |
+| ------------ | ------ |
+| S.push(e)    | `O(1)` |
+| S.pop()      | `O(1)` |
+| S.top()      | `O(1)` |
+| S.is_empty() | `O(1)` |
+| len(S)       | `O(1)` |
+
+The difference as compared with Array based Stack is that the `push & pop` are worst-case always constant time.
