@@ -56,9 +56,9 @@ In addition to Tree's accessor methods, BT supports three additional methods
 
 | T Method       | Description                                                           | Time |
 | -------------- | --------------------------------------------------------------------- | ---- |
-| `T.left(p)`    | return the position of the left child of `p`. None if no left child   |      |
-| `T.right(p)`   | return the position of the right child of `p`. None if no right child |      |
-| `T.sibling(p)` | return the position of the sibling of `p`. None if no sibling         |      |
+| `T.left(p)`    | return the position of the left child of `p`. None if no left child   | O(1) |
+| `T.right(p)`   | return the position of the right child of `p`. None if no right child | O(1) |
+| `T.sibling(p)` | return the position of the sibling of `p`. None if no sibling         | O(1) |
 
 ### Properties
 
@@ -74,6 +74,20 @@ level 2 has atmost 4 nodes
 
 ### Implementation
 
-##### Linked Binary Tree
+#### Linked Binary Tree
+
+A binary tree is naturally represented with a linked structure. The node stores the references of the parent and left & right children nodes and the element stored at p. The root node does not have a parent so the reference to the parent is None. Similarly if node does not have left or right child then respective references are None.
+The Tree's instance variable stores reference to the root and size of the nodes.
 
 ![alt text](assets/image-3.png)
+
+##### Update methods
+
+Our constructor initializes an empty tree and the update methods vary with the Tree implmentation. So here are the update methods supported for Linked Binary Tree
+| T Method | Description | Time |
+| -------------- | --------------------------------------------------------------------- | ---- |
+| `T.add_root(e)` | Create root for an empty tree with `e` as the value and return the position of root. Throw error if T is non empty | O(1) |
+| `T.add_left(p, e)` | Create a new node with value `e` and link it as the left child of position `p`, return the new position. Throw an error if `p` already has left child | O(1) |
+| `T.add_right(p, e)` | Create a new node with value `e` and link it as the right child of position `p`, return the new position. Throw an error if `p` already has right child | O(1) |
+| `T.replace(p, e)` | Replace element stored at position `p` with `e` and return previously stored element. | O(1) |
+| `T.delete(p)` | Remove the node at position `p` and replace it with its child if any. Throw an error if `p` has two children. Return new element stored at `p`. | O(1) |
