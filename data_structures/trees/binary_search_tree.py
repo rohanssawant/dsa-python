@@ -29,6 +29,21 @@ class BinarySearchTree(LinkedBinaryTree):
                         self._add_right(curr_position, value)
                         return
                     curr_position = self.right(curr_position)
+    
+    def search(self, value):
+        """Search a value in a tree"""
+        if len(self) == 0:
+            return False                                # Tree is empty
+        curr_pos = self.root()
+        while (True):
+            if value < curr_pos.element():              # Go left
+                curr_pos = self.left(curr_pos)
+            elif value > curr_pos.element():            # Go right
+                curr_pos = self.right(curr_pos)
+            elif value == curr_pos.element():           # Found ele
+                return True 
+            else:                                       # Not found
+                return False
 
 
 

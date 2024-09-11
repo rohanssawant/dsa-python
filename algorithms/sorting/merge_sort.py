@@ -15,7 +15,7 @@ def merge(arr1, arr2, arr):
             j += 1
         print(f'-----------ongoing merge, arr: {arr}-----------')
         
-    print(f'do merge, after: {arr}')
+    print(f'-------end merge, after: {arr}-----')
     
 
 def merge_sort(arr):
